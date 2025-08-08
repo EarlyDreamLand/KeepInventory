@@ -35,12 +35,12 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew shadowJar
       env:
-        BUILD_NUMBER: 'PR-${{ github.event.number }}-${{ env.SHORT_SHA }}'
+        BUILD_NUMBER: '-${{ env.SHORT_SHA }}'
 
     - name: Upload build
       uses: actions/upload-artifact@v4.3.3
       with:
-        name: 'KeepInventory build PR-${{ github.event.number }}-${{ env.SHORT_SHA }}'
+        name: 'KeepInventory build-${{ env.SHORT_SHA }}'
         path: build/libs
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
