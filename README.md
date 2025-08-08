@@ -10,7 +10,7 @@
 
 ## 使用统计
 
-[![bStats](https://bstats.org/signatures/bukkit/EnableKeepInventory.svg)](bhttps://bstats.org/plugin/bukkit/EnableKeepInventory/26836)
+[![bStats](https://bstats.org/signatures/bukkit/EnableKeepInventory.svg)](https://bstats.org/plugin/bukkit/EnableKeepInventory/26836)
 
 ## 支持
 
