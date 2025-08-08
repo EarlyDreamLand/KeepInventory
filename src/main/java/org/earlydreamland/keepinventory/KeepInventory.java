@@ -9,6 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerLoadEvent;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.earlydreamland.keepinventory.metrics.Metrics;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +26,9 @@ public class KeepInventory extends JavaPlugin implements Listener {
     public void onEnable() {
         // 初始化配置
         initPlugin();
+        // 初始化Metrics
+        int pluginId = 26836;
+        Metrics metrics = new Metrics(this, pluginId);
 
         getCommand("kip").setExecutor(this);
         getCommand("kip").setTabCompleter(this);

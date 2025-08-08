@@ -8,6 +8,10 @@
 
 本插件基于Spigot实现，**理论上支持Java1.13版本至最新版本**。
 
+## 使用统计
+
+[![bStats](https://bstats.org/signatures/bukkit/EnableKeepInventory.svg)](bhttps://bstats.org/plugin/bukkit/EnableKeepInventory/26836)
+
 ## 支持
 
 Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.  
@@ -20,6 +24,7 @@ Many thanks to Jetbrains for kindly providing a license for me to work on this a
 <details>
   <summary>关于 MIT 协议</summary>
 
+>
 > MIT 协议可能是几大开源协议中最宽松的一个，核心条款是：
 >
 > 该软件及其相关文档对所有人免费，可以任意处置，包括使用，复制，修改，合并，发表，分发，再授权，或者销售。唯一的限制是，软件中必须包含上述版权和许可提示。
