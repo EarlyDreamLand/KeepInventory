@@ -33,7 +33,7 @@ jobs:
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew shadowJar
+      run: ./gradlew shadowJar --scan
       env:
         BUILD_NUMBER: '${{ env.SHORT_SHA }}'
 
