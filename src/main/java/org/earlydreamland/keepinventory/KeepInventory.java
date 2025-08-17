@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 public class KeepInventory extends JavaPlugin implements Listener {
     private boolean enabled;
+    private boolean metrics;
     private List<String> worlds;
     String PluginName = "KeepInventory";
 
@@ -26,9 +27,15 @@ public class KeepInventory extends JavaPlugin implements Listener {
     public void onEnable() {
         // 初始化配置
         initPlugin();
+
         // 初始化Metrics
-        int pluginId = 26836;
-        Metrics metrics = new Metrics(this, pluginId);
+        if(metrics){
+            int pluginId = 26836;
+            Metrics metrics = new Metrics(this, pluginId);
+            getLogger().info("已启用 BStats 统计功能。");
+        } else {
+            getLogger().info("已禁用 BStats 统计功能。");
+        }
 
         getCommand("kip").setExecutor(this);
         getCommand("kip").setTabCompleter(this);
@@ -84,7 +91,7 @@ public class KeepInventory extends JavaPlugin implements Listener {
     private boolean handleReloadCommand(CommandSender sender) {
         if (!sender.hasPermission("keepinventory.reload")) {
             sender.sendMessage("§c你没有权限执行此命令！");
-            return false;
+            return true;
         }
 
         reloadPluginConfig();

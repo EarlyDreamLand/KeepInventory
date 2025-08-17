@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'org.earlydreamland.keepinventory'
-version = '1.0.0'
+version = '1.0.1'
 
 repositories {
     mavenCentral()
@@ -32,8 +32,6 @@ shadowJar {
     minimize {
         exclude(dependency('org.spigotmc:spigot-api:.*'))
     }
-
-    relocate 'org.apache.commons', 'org.earlydreamland.shaded.commons'
 
     mergeServiceFiles()
 }

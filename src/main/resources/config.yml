@@ -4,6 +4,9 @@ config-version: 1
 # 是否启用插件
 enable: true
 
+# 是否启用统计，使用 BStats 统计收集
+metrics: true
+
 # 设置死亡不掉落的世界列表
 # 如果为空，则应用到所有世界
 worlds:
