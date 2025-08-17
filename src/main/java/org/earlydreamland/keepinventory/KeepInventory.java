@@ -136,6 +136,7 @@ public class KeepInventory extends JavaPlugin implements Listener {
         reloadConfig();
 
         enabled = getConfig().getBoolean("enable", true);
+        metrics = getConfig().getBoolean("metrics", true);
         worlds = getConfig().getStringList("worlds");
 
         getLogger().info(PluginName + " 插件" + (enabled ? "已启用" : "已禁用") + "！");
