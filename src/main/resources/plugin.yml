@@ -1,7 +1,7 @@
 name: KeepInventory
 version: ${version}
-author: nuoxian
 main: org.earlydreamland.keepinventory.KeepInventory
+authors: [nuoxian]
 api-version: 1.13
 
 commands:
