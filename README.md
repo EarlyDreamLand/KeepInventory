@@ -8,13 +8,22 @@
 
 本插件基于Spigot实现，**理论上支持Java1.13版本至最新版本**。
 
+本插件可以帮助你在每一次服务器重启/世界重置后都能够设置玩家死亡后是否保留库存。
+
 ## 使用统计
 
 [![bStats](https://bstats.org/signatures/bukkit/EnableKeepInventory.svg)](https://bstats.org/plugin/bukkit/EnableKeepInventory/26836)
 
+## 功能实现
+
+- [x] 支持为不同世界启用/禁用保留库存
+- [ ] 支持编辑世界后重载插件同时保留相应世界库存
+- [ ] Multiverse-Core插件兼容性
+
 ## 支持
 
-Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.  
+Many thanks to Jetbrains for kindly providing a license, as well as to DeepSeek for their code assistance, both of which have been crucial for my work on this and other open-source projects.
+
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/EarlyDreamLand/KeepInventory)
 
 ## 开源协议
