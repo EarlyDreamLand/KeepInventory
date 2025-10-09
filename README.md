@@ -21,6 +21,15 @@
 - [x] 支持使用命令启用/禁用世界保留库存
 - [ ] Multiverse-Core插件兼容性
 
+## 使用命令
+
+| 命令 | 功能描述 |
+| ------ | ------ |
+| /kip | 查看插件帮助信息 |
+| /kip reload | 重新加载配置文件 |
+| `/kip add <world>` | 启用世界保留库存 |
+| `/kip del <world>` | 禁用世界保留库存 |
+
 ## 支持
 
 Many thanks to Jetbrains for kindly providing a license, as well as to DeepSeek for their code assistance, both of which have been crucial for my work on this and other open-source projects.
