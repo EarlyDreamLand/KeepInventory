@@ -3,6 +3,8 @@ version: ${version}
 main: org.earlydreamland.keepinventory.KeepInventory
 authors: [nuoxian]
 api-version: 1.13
+website: https://github.com/EarlyDreamLand/KeepInventory
+description: 本插件可以帮助你在每一次服务器重启/世界重置后都能够设置玩家死亡后是否保留库存。
 
 commands:
   kip:
@@ -10,6 +12,11 @@ commands:
     permission: keepinventory.use
     aliases: [keepinventory]
     tab-complete: true
+    usage: |
+      /kip reload - 重载配置
+      /kip version - 查看版本
+      /kip add <world> - 添加世界
+      /kip del <world> - 移除世界
 
 permissions:
   keepinventory.use:
@@ -17,4 +24,7 @@ permissions:
     default: true
   keepinventory.reload:
     description: 允许重载插件配置
+    default: op
+  keepinventory.admin:
+    description: 保留库存插件管理权限
     default: op
