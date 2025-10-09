@@ -49,16 +49,21 @@ public class KeepInventory extends JavaPlugin implements Listener {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length == 0) return showHelp(sender);
 
-        return switch (args[0].toLowerCase()) {
-            case "reload" -> handleReloadCommand(sender);
-            case "version" -> handleVersionCommand(sender);
-            case "add" -> handleAddCommand(sender, args);
-            case "del" -> handleDelCommand(sender, args);
-            default -> {
+        String subCommand = args[0].toLowerCase();
+
+        switch (subCommand) {
+            case "reload":
+                return handleReloadCommand(sender);
+            case "version":
+                return handleVersionCommand(sender);
+            case "add":
+                return handleAddCommand(sender, args);
+            case "del":
+                return handleDelCommand(sender, args);
+            default:
                 sender.sendMessage("§6" + PLUGIN_NAME + " §7› §c未知命令！");
-                yield true;
-            }
-        };
+                return true;
+        }
     }
 
     @Override

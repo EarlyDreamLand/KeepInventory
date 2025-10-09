@@ -4,12 +4,17 @@ plugins {
 }
 
 group = 'org.earlydreamland.keepinventory'
-version = '1.0.2'
+version = '1.0.3'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
 
 repositories {
     mavenCentral()
-    // Spigot官方仓库（包含Bukkit/Spigot API）
     maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
 }
 
 configurations {
@@ -18,7 +23,7 @@ configurations {
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot-api:[1.13,)'
+    compileOnly 'org.spigotmc:spigot-api:1.13.+'
 
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -34,6 +39,12 @@ shadowJar {
     }
 
     mergeServiceFiles()
+
+    exclude 'META-INF/*.SF'
+    exclude 'META-INF/*.DSA'
+    exclude 'META-INF/*.RSA'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/NOTICE'
 }
 
 build {
@@ -44,7 +55,7 @@ processResources {
     def props = [version: version]
     inputs.properties props
     filteringCharset 'UTF-8'
-    filesMatching('plugin.yml') {
+    filesMatching(['plugin.yml', '*.properties']) {
         expand props
     }
 }
