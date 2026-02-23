@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerLoadEvent;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.earlydreamland.keepinventory.metrics.Metrics;
+import org.bstats.bukkit.Metrics;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -117,7 +117,8 @@ public class KeepInventory extends JavaPlugin implements Listener {
 
     private void setupMetrics() {
         if (!metrics) return;
-        new Metrics(this, 26836);
+        int pluginId = 26836;
+        Metrics metrics = new Metrics(this, pluginId);
         getLogger().info("已启用 BStats 统计功能。");
     }
 
